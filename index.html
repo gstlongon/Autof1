@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Sans:wght@700&family=Poppins:ital,wght@0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Auto-Center Formula-1</title>
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <img src="/assets/Fotos empresa/logo-formula1.png" alt=""
+        /></a>
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="#home">Inicio</a>
+            </li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#about"> Sobre</a></li>
+          </ul>
+          <a class="button" href="#contact" onclick="closeMenu()"
+            >Contato</a
+          >
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/f1autoacessorios/"
+                ><svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 0.999969H6C3.23858 0.999969 1 3.23855 1 5.99997V16C1 18.7614 3.23858 21 6 21H16C18.7614 21 21 18.7614 21 16V5.99997C21 3.23855 18.7614 0.999969 16 0.999969Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.9997 10.3701C15.1231 11.2023 14.981 12.0523 14.5935 12.7991C14.206 13.5459 13.5929 14.1515 12.8413 14.5297C12.0898 14.908 11.2382 15.0397 10.4075 14.906C9.57683 14.7723 8.80947 14.3801 8.21455 13.7852C7.61962 13.1903 7.22744 12.4229 7.09377 11.5923C6.96011 10.7616 7.09177 9.90995 7.47003 9.15843C7.84829 8.40691 8.45389 7.7938 9.20069 7.4063C9.94749 7.0188 10.7975 6.87665 11.6297 7.00006C12.4786 7.12594 13.2646 7.52152 13.8714 8.12836C14.4782 8.73521 14.8738 9.52113 14.9997 10.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/pages/category/Product-service/Auto-Acess%C3%B3rios-Formula-1-De-Marilia-107705144397449/"
+                ><svg
+                  width="13"
+                  height="22"
+                  viewBox="0 0 13 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0.999969H9C7.67392 0.999969 6.40215 1.52675 5.46447 2.46444C4.52678 3.40212 4 4.67389 4 5.99997V8.99997H1V13H4V21H8V13H11L12 8.99997H8V5.99997C8 5.73475 8.10536 5.4804 8.29289 5.29286C8.48043 5.10533 8.73478 4.99997 9 4.99997H12V0.999969Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com/"
+                ><svg
+                  width="24"
+                  height="18"
+                  viewBox="0 0 24 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 3.42C22.4208 2.94541 22.1789 2.51057 21.8382 2.15941C21.4976 1.80824 21.0703 1.55318 20.5996 1.42C18.8796 1 11.9996 1 11.9996 1C11.9996 1 5.1196 1 3.3996 1.46C2.92884 1.59318 2.50157 1.84824 2.16094 2.19941C1.82031 2.55057 1.57838 2.98541 1.4596 3.46C1.14481 5.20556 0.990831 6.97631 0.999595 8.75C0.988374 10.537 1.14236 12.3213 1.4596 14.08C1.59055 14.5398 1.8379 14.9581 2.17774 15.2945C2.51758 15.6308 2.93842 15.8738 3.3996 16C5.1196 16.46 11.9996 16.46 11.9996 16.46C11.9996 16.46 18.8796 16.46 20.5996 16C21.0703 15.8668 21.4976 15.6118 21.8382 15.2606C22.1789 14.9094 22.4208 14.4746 22.5396 14C22.852 12.2676 23.0059 10.5103 22.9996 8.75C23.0108 6.96295 22.8568 5.1787 22.5396 3.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 12.02L15.5 8.75001L9.75 5.48001V12.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button
+          aria-expanded="false"
+          aria-label="Openmenu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-label="close menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 1L1 21M1 1L21 21"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>BEM VINDO A FORMULA 1 AUTO-CENTER 👋</h4>
+            <h1>Aqui seu carro recebe o melhor tratamento!</h1>
+          </header>
+          <div class="content">
+            <p>
+              Nossos profissionais focam em realizar o serviço com excelência e
+              muito capricho no seu carro, venha conferir!
+            </p>
+            <a href="#contact" class="button">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.8337 10.6667C12.667 10.5833 11.5837 10.0833 11.417 10C11.2503 9.91668 11.0837 9.91668 10.917 10.0833C10.7503 10.25 10.417 10.75 10.2503 10.9167C10.167 11.0833 10.0003 11.0833 9.83366 11C9.25033 10.75 8.66699 10.4167 8.16699 10C7.75033 9.58334 7.33366 9.08334 7.00033 8.58334C6.91699 8.41668 7.00033 8.25001 7.08366 8.16668C7.16699 8.08334 7.25033 7.91668 7.41699 7.83334C7.50033 7.75001 7.58366 7.58334 7.58366 7.50001C7.66699 7.41668 7.66699 7.25001 7.58366 7.16668C7.50033 7.08334 7.08366 6.08334 6.91699 5.66668C6.83366 5.08334 6.66699 5.08334 6.50033 5.08334C6.41699 5.08334 6.25033 5.08334 6.08366 5.08334C5.91699 5.08334 5.66699 5.25001 5.58366 5.33334C5.08366 5.83334 4.83366 6.41668 4.83366 7.08334C4.91699 7.83334 5.16699 8.58334 5.66699 9.25001C6.58366 10.5833 7.75033 11.6667 9.16699 12.3333C9.58366 12.5 9.91699 12.6667 10.3337 12.75C10.7503 12.9167 11.167 12.9167 11.667 12.8333C12.2503 12.75 12.7503 12.3333 13.0837 11.8333C13.2503 11.5 13.2503 11.1667 13.167 10.8333C13.167 10.8333 13.0003 10.75 12.8337 10.6667ZM14.917 3.08334C11.667 -0.166656 6.41699 -0.166656 3.16699 3.08334C0.500325 5.75001 0.000325561 9.83334 1.83366 13.0833L0.666992 17.3333L5.08366 16.1667C6.33366 16.8333 7.66699 17.1667 9.00033 17.1667C13.5837 17.1667 17.2503 13.5 17.2503 8.91668C17.3337 6.75001 16.417 4.66668 14.917 3.08334ZM12.667 14.75C11.5837 15.4167 10.3337 15.8333 9.00033 15.8333C7.75033 15.8333 6.58366 15.5 5.50033 14.9167L5.25033 14.75L2.66699 15.4167L3.33366 12.9167L3.16699 12.6667C1.16699 9.33334 2.16699 5.16668 5.41699 3.08334C8.66699 1.00001 12.8337 2.08334 14.8337 5.25001C16.8337 8.50001 15.917 12.75 12.667 14.75Z"
+                  fill="white"
+                />
+              </svg>
+              Entre em contato
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="/assets/Fotos empresa/alarme-removebg-preview.png"
+            alt="Controle_alarmePositron"
+          />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h2>Serviços Espacializados</h2>
+            <p>Variedades de produtos a pronta entrega e o serviço que seu carro merece!</p>
+          </div>
+          <div class="stat">
+            <h3>+14</h3>
+            <p>Anos no mercado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>Serviços</h4>
+          <h2>Serviços de Acessórios e Mecânicos que oferecemos.</h2>
+        </header>
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>ALINHAMENTO E BALANCEAMENTO</h3>
+              <p>
+                O alinhamento das rodas, consiste em ajustar os ângulos das rodas de modo a obedecerem às especificações do fabricante do veículo. Por outro lado, o balanceamento das rodas permite que estas girem sem causar vibrações desnecessárias.
+              </p>
+            </div>
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>TROCA DE ÓLEO</h3>
+              <p>
+                A troca de óleo é necessária para que esse lubrificante continue atuando adequadamente sobre as partes móveis do motor, faça a limpeza de resíduos (partículas metálicas e impurezas)
+              </p>
+            </div>
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>RETIFICA DE CABEÇOTE</h3>
+              <p>
+                A retífica de cabeçotes geralmente é feita para corrigir folgas e assentamentos. Após desmontar o componente, ele passa por um teste de pressão. É onde se descobre se há trincas ou rachaduras na peça. Se este for o caso, deve ser feita uma soldagem.
+              </p>
+            </div>
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>ESCAPAMENTOS</h3>
+              <p>
+                Peça importante para evitar que gases nocivos entrem no veículos e para a redução de ruídos, os silenciosos devem receber atenção especial na hora da troca. Já o Silencioso Traseiro completa as funções do silencioso intermediário e elimina os ruídos de baixa frequência.
+              </p>
+            </div>
+             <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>SUSPENSÃO</h3>
+              <p>
+                Para se prevenir de problemas, devem ser feitas revisões periódicas na suspensão do carro, para avaliar a situação dos amortecedores e de outros componentes, como os pivôs e buchas.
+              </p>
+            </div>
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>RETIFICA DE FREIO</h3>
+              <p>
+                A retífica é uma espécie de torno, que ajusta os dois lados do disco de freio de maneira uniforme. É necessário retificar os dois lados juntos, ao mesmo tempo, para que não fique desbalanceado. Ela corrige as duas partes e retira material até que ambos atinjam a superfície perfeita.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>INSULFILM</h3>
+              <p>
+                O Insulfilm automotivo também ajuda a manter a luminosidade adequada no seu veículo, isso ajuda o motorista a enxergar melhor e também evita a fadiga dos olhos, causando cansaço e até no longo prazo, danos a visão. Com a película, o interior do carro fica muito mais confortável.
+              </p>
+            </div>
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>INSTALAÇÃO DE ALARME,TRAVA,VIDRO ELÉTRICO E ACESSÓRIOS EM GERAL</h3>
+              <p>
+               Nós da Formula um temos um estoque com muitas variedades e preço acessível ao seu bolso.
+              </p>
+            </div>
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>REPARO DE MAQUINA DE VIDRO</h3>
+              <p>
+                Essa é nossa especialidade, na maioria dos casos a máquina elétrica de levantar o vidro do carro danifica, é natural que haja o desgaste. Consertamos sua máquina do vidro elétrico mantendo a originalidade da peça.
+              </p>
+            </div>
+           
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Sobre nós</h4>
+            <h2>Entenda porque nós nos destacamos no mercado.</h2>
+          </header>
+
+          <div class="content">
+            <p>
+              Fundada dia 20/08/2008 na cidade de Marília/SP, a Formula 1
+              Acessórios Automotivos iniciou suas atividades focada na
+              manutenção e comercialização de acessórios, destacando-se em
+              manutenções relacionadas a máquina do vidro elétrico, onde
+              resolvemos na grande maioria dos problemas apenas reparando a
+              peça, minimizando custos pois não houve troca por uma peça nova. A
+              qualidade em nosso trabalho nos deu credibilidade e isso, ao
+              passar do tempo, nos fez atender também serviços relacionados a
+              suspensão e freio. Hoje, podemos dizer que nossa empresa é uma das
+              mais completas da região. Sempre prezando por qualidade, nosso
+              atendimento e nossa equipe de profissionais estarão sempre à
+              disposição para que seu carro seja tratado da melhor forma
+              possível.
+            </p>
+          </div>
+        </div>
+        <div class="col-b">
+       
+    </section>
+
+    <div class="container swiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/Fotos empresa/fotoempresa1.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/Fotos empresa/fotoempresa2.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/Fotos empresa/fotoempresa3.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/Fotos empresa/fotoempresa4.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/Fotos empresa/fotoempresa5.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/Fotos empresa/fotoempresa6.jpeg" alt="" />
+          </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Entre em contato com a gente!</h2>
+          </header>
+          <div class="content">
+            <ul>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Rua Coronel Galdino de Almeida, 775 - Alto Cafezal
+CEP: 17.502-030, Marília - SP 
+              </li>
+              <li>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.0001 15.9201V18.9201C21.0012 19.1986 20.9441 19.4743 20.8326 19.7294C20.721 19.9846 20.5574 20.2137 20.3521 20.402C20.1469 20.5902 19.9046 20.7336 19.6408 20.8228C19.377 20.912 19.0974 20.9452 18.8201 20.9201C15.7429 20.5857 12.7871 19.5342 10.1901 17.8501C7.77388 16.3148 5.72539 14.2663 4.19006 11.8501C2.50003 9.2413 1.4483 6.27109 1.12006 3.1801C1.09507 2.90356 1.12793 2.62486 1.21656 2.36172C1.30518 2.09859 1.44763 1.85679 1.63482 1.65172C1.82202 1.44665 2.04986 1.28281 2.30385 1.17062C2.55783 1.05843 2.8324 1.00036 3.11006 1.0001H6.11006C6.59536 0.995321 7.06585 1.16718 7.43382 1.48363C7.80179 1.80008 8.04213 2.23954 8.11005 2.7201C8.23668 3.68016 8.47151 4.62282 8.81006 5.5301C8.9446 5.88802 8.97372 6.27701 8.89396 6.65098C8.81421 7.02494 8.62892 7.36821 8.36005 7.6401L7.09006 8.9101C8.51361 11.4136 10.5865 13.4865 13.0901 14.9101L14.3601 13.6401C14.6319 13.3712 14.9752 13.1859 15.3492 13.1062C15.7231 13.0264 16.1121 13.0556 16.4701 13.1901C17.3773 13.5286 18.32 13.7635 19.2801 13.8901C19.7658 13.9586 20.2095 14.2033 20.5266 14.5776C20.8437 14.9519 21.0122 15.4297 21.0001 15.9201Z" stroke="#69B99D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  14-3454-2442
+              </li>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                formula1autoacessorios@hotmail.com
+              </li>
+            </ul>
+            <a class="button" href="https://wa.me/5514996777843" target="_blank"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                  fill="white"
+                />
+              </svg>
+              ENTRE EM CONTATO</a
+            >
+          </div>
+        </div>
+        <div class="col-b">
+          <img src="/assets/foto-footer.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home"
+            ><img src="/assets/Fotos empresa/logo-formula1.png" alt=""
+          /></a>
+
+          <p>
+            ©2021 Formula 1. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/f1autoacessorios/"
+                ><svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 0.999969H6C3.23858 0.999969 1 3.23855 1 5.99997V16C1 18.7614 3.23858 21 6 21H16C18.7614 21 21 18.7614 21 16V5.99997C21 3.23855 18.7614 0.999969 16 0.999969Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.9997 10.3701C15.1231 11.2023 14.981 12.0523 14.5935 12.7991C14.206 13.5459 13.5929 14.1515 12.8413 14.5297C12.0898 14.908 11.2382 15.0397 10.4075 14.906C9.57683 14.7723 8.80947 14.3801 8.21455 13.7852C7.61962 13.1903 7.22744 12.4229 7.09377 11.5923C6.96011 10.7616 7.09177 9.90995 7.47003 9.15843C7.84829 8.40691 8.45389 7.7938 9.20069 7.4063C9.94749 7.0188 10.7975 6.87665 11.6297 7.00006C12.4786 7.12594 13.2646 7.52152 13.8714 8.12836C14.4782 8.73521 14.8738 9.52113 14.9997 10.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/pages/category/Product-service/Auto-Acess%C3%B3rios-Formula-1-De-Marilia-107705144397449/"
+                ><svg
+                  width="13"
+                  height="22"
+                  viewBox="0 0 13 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0.999969H9C7.67392 0.999969 6.40215 1.52675 5.46447 2.46444C4.52678 3.40212 4 4.67389 4 5.99997V8.99997H1V13H4V21H8V13H11L12 8.99997H8V5.99997C8 5.73475 8.10536 5.4804 8.29289 5.29286C8.48043 5.10533 8.73478 4.99997 9 4.99997H12V0.999969Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com/"
+                ><svg
+                  width="24"
+                  height="18"
+                  viewBox="0 0 24 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 3.42C22.4208 2.94541 22.1789 2.51057 21.8382 2.15941C21.4976 1.80824 21.0703 1.55318 20.5996 1.42C18.8796 1 11.9996 1 11.9996 1C11.9996 1 5.1196 1 3.3996 1.46C2.92884 1.59318 2.50157 1.84824 2.16094 2.19941C1.82031 2.55057 1.57838 2.98541 1.4596 3.46C1.14481 5.20556 0.990831 6.97631 0.999595 8.75C0.988374 10.537 1.14236 12.3213 1.4596 14.08C1.59055 14.5398 1.8379 14.9581 2.17774 15.2945C2.51758 15.6308 2.93842 15.8738 3.3996 16C5.1196 16.46 11.9996 16.46 11.9996 16.46C11.9996 16.46 18.8796 16.46 20.5996 16C21.0703 15.8668 21.4976 15.6118 21.8382 15.2606C22.1789 14.9094 22.4208 14.4746 22.5396 14C22.852 12.2676 23.0059 10.5103 22.9996 8.75C23.0108 6.96295 22.8568 5.1787 22.5396 3.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 12.02L15.5 8.75001L9.75 5.48001V12.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home"
+      ><svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <!-----SCROLL REVEAL - LIB-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-----------SWIPER------------->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
